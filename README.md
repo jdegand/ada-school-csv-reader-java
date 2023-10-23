@@ -29,11 +29,13 @@ Solution to this [repo](https://github.com/ada-school/csv-reader-java).
 ## Thoughts
 
 - The maven archetypes are outdated when you create new projects in VS Code.  Nothing has really changed in years. 
-- I always use double so I was suprised to see float in the starter code.  
+- I always use double so I was surprised to see float in the starter code.  
 - Double can be overkill and maybe I should use float more often.  
 - Scanner is slower than BufferedReader.  
 - I looked into various csv libraries. Deephaven CSV seems like an interesting new library.  Super CSV seems to be slightly outdated. 
 - I thought about using different branches or different classes but I decided just to comment out different approaches for right now.  
+- When you uncomment any section, you will need to add the imports.  
+- You need to add an empty constructor to POJO class for opencsv to parse your csv file.  Otherwise, you will get a csv bean introspection exception.
 
 ## Continued Development
 
@@ -53,3 +55,6 @@ Solution to this [repo](https://github.com/ada-school/csv-reader-java).
 - [North Concepts](https://northconcepts.com/docs/examples/continue-after-an-error) - continue after an error
 - [Stack Overflow](https://stackoverflow.com/questions/28659462/how-to-ignore-exceptions-in-java) - how to ignore exceptions in java
 - [Source Forge](https://opencsv.sourceforge.net/#quick_start) - open csv quick start
+- [Baeldung](https://www.baeldung.com/opencsv) - opencsv
+- [YouTube](https://www.youtube.com/watch?v=1SOKpFVPxLA) - Read CSV with Bean Class Java | CSV Bean Builder in Open CSV| CsvBindByName Open CSV |Opencsv Java
+- [Stack Overflow](https://stackoverflow.com/questions/50463948/getting-csvbeanintrospectionexception-while-using-opencsv) - csv bean introspection exception

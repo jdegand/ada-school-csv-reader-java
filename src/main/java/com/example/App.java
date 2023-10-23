@@ -1,14 +1,12 @@
 package com.example;
 
-import java.io.File;
+import java.io.FileReader;
 import java.io.FileNotFoundException;
 
-import java.util.ArrayList;
-
 import java.util.List;
-import java.util.Scanner;
 
 import com.example.model.Product;
+import com.opencsv.bean.CsvToBeanBuilder;
 
 /*  
 
@@ -37,6 +35,7 @@ public class App {
 }
 */
 
+/* 
 public class App {
     public static void main(String[] args) {
         List<Product> result = new ArrayList<>();
@@ -75,6 +74,7 @@ public class App {
         }
     }
 }
+*/
 
 /* 
 
@@ -277,7 +277,7 @@ public class App {
 /* 
 // This works but will fail if any line is incorrectly formed
 // It handles NumberFormatException
-// Uncomment the limit to see the code actually work before exception gets thrown
+// Uncomment the limit to see the code actually work before an exception occurs
 public class App {
     public static void main(String[] args) throws IOException {
         Path path = Path.of("resources", "inventory.csv");
@@ -313,3 +313,20 @@ public class App {
     }
 }
 */
+
+public class App {
+    public static void main(String[] args) {
+
+        try {
+            List<Product> products = new CsvToBeanBuilder<Product>(new FileReader("resources/inventory.csv"))
+                    .withType(Product.class).build().parse();
+
+            for (Product p : products) {
+                System.out.println(p.toString());
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}
