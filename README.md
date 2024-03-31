@@ -28,14 +28,14 @@ Solution to this [repo](https://github.com/ada-school/csv-reader-java).
 
 ## Thoughts
 
-- The maven archetypes are outdated when you create new projects in VS Code.  Nothing has really changed in years. 
-- I always use double so I was surprised to see float in the starter code.  
-- Double can be overkill and maybe I should use float more often.  
-- Scanner is slower than BufferedReader.  
-- I looked into various csv libraries. Deephaven CSV seems like an interesting new library.  Super CSV seems to be slightly outdated. 
-- I thought about using different branches or different classes but I decided just to comment out different approaches for right now.  
-- When you uncomment any section, you will need to add the imports.  
-- You need to add an empty constructor to POJO class for opencsv to parse your csv file.  Otherwise, you will get a csv bean introspection exception.
+- The Maven archetypes are outdated when you create new projects in VS Code. Nothing has really changed in years.
+- I always use double, so I was surprised to see a float used in the starter code.
+- Double can be overkill, and maybe I should use float more often.
+- `Scanner` and `FileReader` are slower than `BufferedReader`.
+- I looked into various CSV libraries. Deephaven CSV seems like an interesting new library. Super CSV seems to be slightly outdated.
+- I thought about using different branches or different classes, but I decided just to comment out different approaches for right now.
+- When you uncomment any section, you will need to add the imports.
+- You need to add an empty constructor to any POJO class for opencsv to parse your CSV file. Otherwise, you will get a CSV bean introspection exception.
 
 ## Continued Development
 
