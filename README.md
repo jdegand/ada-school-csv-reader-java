@@ -39,7 +39,7 @@ Solution to this [repo](https://github.com/ada-school/csv-reader-java).
 
 ## Continued Development
 
-- Different classes or branches for different approaches
+- Different classes or branches for the different approaches
 
 ## Useful Resources
 
